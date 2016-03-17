@@ -1,0 +1,15 @@
+<template name="authenticatedNavigation">
+  <ul class="nav navbar-nav">
+    <li class="{{currentRoute 'index'}}"><a href="{{pathFor 'index'}}">Index</a></li>
+    <li class="{{currentRoute 'queue'}}"><a href="{{pathFor 'queue'}}">My Queue</a></li>
+    <li class="{{currentRoute 'player'}}"><a href="{{pathFor 'player'}}">My Player</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{currentUser.emails.[0].address}} <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <li class="logout"><a href="#">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</template>
