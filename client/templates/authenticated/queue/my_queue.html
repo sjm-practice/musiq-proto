@@ -1,0 +1,21 @@
+<template name='myQueue'>
+  <h4>My Q!</h4>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <table class='table table-striped'>
+        <tr>
+          <th width='60%'>Title</th>
+          <th width='20%'>Submitted By</th>
+          <th width='20%'>Status</th>
+        </tr>
+        {{#each playerQueueItems}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{submittedBy}}</td>
+            <td>{{status}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</template>

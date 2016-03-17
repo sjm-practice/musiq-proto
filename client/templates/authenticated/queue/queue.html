@@ -1,3 +1,36 @@
-<template name="queue">
-    <p>User queue goes here.</p>
+<template name='queue'>
+  <div class='row'>
+    <div class='col-sm-4'>
+      <h2>Q <em>YOUR</em> music!</h2>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-sm-6'>
+      <div class='row'>
+        <div class='col-sm-12'>
+          <h4>Current Player...</h4>
+          <select id='playerName' class='form-control'>
+            {{#each players}}
+              <option value='{{username}}' {{isSelectedPlayer}}>{{username}}</option>
+            {{/each}}
+          </select>
+          <h4>Find a tune... (by title or artist)</h4>
+          <form>
+            <div class='form-group'>
+              <input type='text' class='form-control' name='videoSearchTitle' autofocus='autofocus'>
+            </div>
+            <input type='submit' value='Search' class='btn btn-primary'>
+          </form>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-12'>
+          {{> searchResults}}
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-6'>
+      {{> myQueue}}
+    </div>
+  </div>
 </template>

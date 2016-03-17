@@ -2,8 +2,10 @@
 
 An online jukebox.
 
+## Notes
+* ...
 
-### based on The Meteor Chef - Base
+## based on The Meteor Chef - Base
 A starting point for Meteor apps.
 
 <table>
@@ -21,5 +23,3 @@ A starting point for Meteor apps.
 
 [Read the Documentation](http://themeteorchef.com/base)
 
-## Notes
-* ...
