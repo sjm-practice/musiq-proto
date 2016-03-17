@@ -1,9 +1,9 @@
-## MusiQ!
+# MusiQ!
 
 An online jukebox.
 
 
-## based on The Meteor Chef - Base
+### based on The Meteor Chef - Base
 A starting point for Meteor apps.
 
 <table>

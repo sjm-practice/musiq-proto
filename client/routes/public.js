@@ -1,13 +1,5 @@
-const publicRedirect = () => {
-  if ( Meteor.userId() ) {
-    // if going to a public route, and user is logged in, redirect to profile
-    FlowRouter.go( 'profile' );
-  }
-};
-
 const publicRoutes = FlowRouter.group({
-  name: 'public',
-  triggersEnter: [ publicRedirect ]
+  name: 'public'
 });
 
 publicRoutes.route( '/', {

@@ -21,7 +21,6 @@ standard-minifiers
 
 npm-container
 ecmascript
-digilord:faker
 kadira:flow-router
 kadira:blaze-layout
 meteorhacks:fast-render
