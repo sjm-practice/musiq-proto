@@ -1,4 +1,9 @@
-# The Meteor Chef - Base
+## MusiQ!
+
+An online jukebox.
+
+
+## based on The Meteor Chef - Base
 A starting point for Meteor apps.
 
 <table>
@@ -15,10 +20,6 @@ A starting point for Meteor apps.
 </table>
 
 [Read the Documentation](http://themeteorchef.com/base)
-
-## MusiQ!
-
-An online jukebox.
 
 ## Notes
 * ...
