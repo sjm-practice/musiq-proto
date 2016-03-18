@@ -1,3 +1,8 @@
+Template.queue.onCreated(function () {
+  this.subscribe('players');
+  this.subscribe('requests');
+});
+
 Template.queue.events({
   'change #playerName': function(e) {
     Meteor.users.update(Meteor.userId(), {$set: {selectedPlayer: $('#playerName').val()}});

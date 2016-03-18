@@ -1,7 +1,9 @@
-Template.searchResults.results = function() {
-  musiqApp_searchResults_dep.depend();
-  return musiqApp_searchResults;
-};
+Template.searchResults.helpers({
+  results: function() {
+    musiqApp_searchResults_dep.depend();
+    return musiqApp_searchResults;
+  }
+});
 
 Template.searchResults.events({
   'click .addSong': function(e) {
