@@ -1,6 +1,9 @@
 // Server Methods / Services for the client
 Meteor.methods({
   searchYoutubeVideos: function(searchTitle, maxResults) {
+    check(searchTitle, String);
+    check(maxResults, Number);
+
     this.unblock();
 
     //
@@ -8,7 +11,7 @@ Meteor.methods({
     //
     var searchURL = "https://www.googleapis.com/youtube/v3/search";
     var params = "?part=snippet&maxResults=";
-    params += maxResults;
+    params += maxResults.toString(10);
     params += "&q=";
     params += encodeURIComponent(searchTitle);
     params += "&type=video&videoEmbeddable=true&key=";

@@ -11,7 +11,7 @@ Template.queue.events({
     e.preventDefault();
     var searchTitle = $(e.target).find('[name=videoSearchTitle]').val();
 
-    Meteor.call('searchYoutubeVideos', searchTitle, '12', function(error, responseItems) {
+    Meteor.call('searchYoutubeVideos', searchTitle, 12, function(error, responseItems) {
       if (error) {
         console.log(error.reason);
       }
