@@ -3,7 +3,7 @@ Template.queue.events({
     Meteor.users.update(Meteor.userId(), {$set: {selectedPlayer: $('#playerName').val()}});
   },
   'submit form': function(e) {
-    e.preve(ntDefault()) ? 'selected' : '';
+    e.preventDefault();
     var searchTitle = $(e.target).find('[name=videoSearchTitle]').val();
 
     Meteor.call('searchYoutubeVideos', searchTitle, '12', function(error, responseItems) {

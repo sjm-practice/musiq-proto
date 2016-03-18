@@ -1,24 +1,3 @@
-// Allow the current user, to save their selected player in their own user doc
-Meteor.users.allow({
-  update: function(userId, doc) {
-    return !!userId && userId === doc._id;
-  }
-});
-
-// Initialize certain properties for newly created users
-Accounts.onCreateUser(function(options, user) {
-
-  // if any profile from default hook's profile, keep it
-  if (options.profile) {
-    user.profile = options.profile;
-  }
-
-  // default selectedPlayer (checked in player), to own player
-  user.selectedPlayer = user.username;
-
-  return user;
-});
-
 // Server Methods / Services for the client
 Meteor.methods({
   searchYoutubeVideos: function(searchTitle, maxResults) {
