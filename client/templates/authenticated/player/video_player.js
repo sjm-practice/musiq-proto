@@ -1,4 +1,5 @@
 Template.videoPlayer.rendered = function() {
+  // load / display youtube player
   YT.load();
 };
 
