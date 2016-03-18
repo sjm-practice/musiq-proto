@@ -6,6 +6,8 @@
 
 .env
 
+set_heroku_env.sh
+
 .npm/
 settings-production.json
 npm-debug.log
