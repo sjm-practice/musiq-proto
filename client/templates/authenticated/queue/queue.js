@@ -5,8 +5,9 @@ Template.queue.onCreated(function () {
 
 Template.queue.events({
   'change #playerName': function(e) {
-    Meteor.users.update(Meteor.userId(), {$set: {selectedPlayer: $('#playerName').val()}});
+    Meteor.users.update(Meteor.userId(), {$set: {"profile.selectedPlayer": $('#playerName').val()}});
   },
+
   'submit form': function(e) {
     e.preventDefault();
     var searchTitle = $(e.target).find('[name=videoSearchTitle]').val();
@@ -26,8 +27,5 @@ Template.queue.events({
 Template.queue.helpers({
   players: function() {
     return Meteor.users.find({}, {fields: {'username': 1}});
-  },
-  isSelectedPlayer: function() {
-    return (Meteor.user().selectedPlayer === this.username) ? 'selected' : '';
   }
 });
