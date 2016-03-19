@@ -27,5 +27,9 @@ Template.queue.events({
 Template.queue.helpers({
   players: function() {
     return Meteor.users.find({}, {fields: {'username': 1}});
+  },
+
+  isSelectedPlayer: function() {
+    return (Meteor.user().profile.selectedPlayer === this.username) ? 'selected' : '';
   }
 });
