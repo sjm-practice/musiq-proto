@@ -11,7 +11,7 @@ Template.searchResults.events({
 
     // save chosen song, for the selected player
     Requests.insert({
-      player: Meteor.user().selectedPlayer,
+      player: Meteor.user().profile.selectedPlayer,
       title: this.title,
       videoId: this.videoId,
       status: musiqApp_STATUS_WAITING,
