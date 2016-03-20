@@ -2,6 +2,10 @@ tr.nowPlaying {
   color: blue;
 }
 
+thead {
+  background: #2980b9;
+}
+
 img.center {
   display: block;
   margin-left: auto;

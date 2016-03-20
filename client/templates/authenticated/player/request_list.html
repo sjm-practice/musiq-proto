@@ -1,21 +1,25 @@
 <template name='requestList'>
   {{#if requestsCount}}
-    <table class='table table-striped'>
-      <tr>
-        <th width='60%'>Title</th>
-        <th width='20%'>Submitted By</th>
-        <th width='20%'>Submitted</th>
-      </tr>
-      {{#each requests}}
-        <tr class='{{isNowPlaying}}'>
-          <td>{{title}}</td>
-          <td>{{submittedBy}}</td>
-          <td>{{timeDateFormatted}}</td>
-        </tr>
-      {{/each}}
-    </table>
+      <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th width='60%'>Title</th>
+              <th width='20%'>Submitted By</th>
+              <th width='20%'>Submitted</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each requests}}
+              <tr class='{{isNowPlaying}}'>
+                  <td>{{title}}</td>
+                  <td>{{submittedBy}}</td>
+                  <td>{{timeDateFormatted}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+      </table>
   {{else}}
-    <br>
-    <h4>&nbsp; &nbsp; No Requests?! &nbsp; &nbsp; play some music...</h4>
+      <br>
+      <h4>&nbsp; &nbsp; No Requests?! &nbsp; &nbsp; play some music...</h4>
   {{/if}}
 </template>
