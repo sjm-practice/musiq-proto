@@ -3,9 +3,15 @@
 An online jukebox.
 
 ## Notes
+### Changes to Base
+ * had to remove a couple users.allow & users.deny conditions, to allow some changes to user
+ * had to remove browser-policy package to allow youtube player to play in an iframe
+  * note, ulitmately better to keep / use browser-policy package, and just adjust settings to allow iframe and scripts (read docs. also there is a meteor chef snippet on it, and David Weldon blog too)
+
+### Other Changes
 * ...
 
-## based on The Meteor Chef - Base
+## based on boilerplate -> The Meteor Chef - Base
 A starting point for Meteor apps.
 
 <table>
