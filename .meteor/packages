@@ -15,6 +15,7 @@ meteorhacks:npm
 
 themeteorchef:bert
 meteorhacks:ssr
+standard-minifiers
 
 
 npm-container
@@ -34,5 +35,3 @@ tracker
 momentjs:moment
 adrianliaw:youtube-iframe-api
 http
-standard-minifier-css
-standard-minifier-js

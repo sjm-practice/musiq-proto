@@ -10,6 +10,7 @@ An online jukebox.
 
 ### Other Changes
 * tried upgrading to Meteor 1.3 to use modules for testing. But Heroku didn't support 1.3, so reverted back to 1.2.1 for now
+  * had a helluva time reverting back a version. git wasn't recognizing the files changes. was stating all files up to date. had to fool around with git reset, revert, pull. then finally had to manually update the meteor version/release/.finished-upgraders/package files.
 
 ## based on boilerplate -> The Meteor Chef - Base
 A starting point for Meteor apps.
