@@ -9,7 +9,7 @@ An online jukebox.
   * note, ulitmately better to keep / use browser-policy package, and just adjust settings to allow iframe and scripts (read docs. also there is a meteor chef snippet on it, and David Weldon blog too)
 
 ### Other Changes
-* ...
+* tried upgrading to Meteor 1.3 to use modules for testing. But Heroku didn't support 1.3, so reverted back to 1.2.1 for now
 
 ## based on boilerplate -> The Meteor Chef - Base
 A starting point for Meteor apps.
