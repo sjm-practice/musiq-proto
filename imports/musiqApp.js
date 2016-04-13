@@ -18,6 +18,8 @@ class MusiqApp {
     Session.set(SEARCH_RESULTS, resultList);
   }
 
+  // TODO this should be getting called, but musiqApp is undefined where it is called.
+  // see other TODO.
   getSearchResults() {
     Session.get(SEARCH_RESULTS);
   }
