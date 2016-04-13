@@ -1,7 +1,9 @@
+import {STATUS_PLAYED} from '/imports/musiqApp';
+
 Meteor.publish('requests', function() {
   // publish all requests, that have not yet played
   return Requests.find(
-    {status: {$ne: musiqApp_STATUS_PLAYED}},
+    {status: {$ne: STATUS_PLAYED}},
     {sort: {created: 1}}
   );
 });

@@ -1,3 +1,5 @@
+import {musiqApp} from '/imports/musiqApp'
+
 Template.queue.onCreated(function () {
   this.subscribe('players');
   this.subscribe('requests');
@@ -16,7 +18,7 @@ Template.queue.events({
       if (error) {
         console.log(error.reason);
       }
-      musiqApp_formatSearchResults(responseItems);
+      musiqApp.formatSearchResults(responseItems);
     });
 
     // clear out the search box

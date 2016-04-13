@@ -1,7 +1,10 @@
+import {musiqApp, STATUS_WAITING} from '/imports/musiqApp';
+
 Template.searchResults.helpers({
   results: function() {
-    musiqApp_searchResults_dep.depend();
-    return musiqApp_searchResults;
+    // TODO determine why musiqApp isn't defined here. (and avoid calling Session directly)
+    // return musiqApp.getSearchResults();
+    return Session.get('searchResults');
   }
 });
 
@@ -14,12 +17,11 @@ Template.searchResults.events({
       player: Meteor.user().profile.selectedPlayer,
       title: this.title,
       videoId: this.videoId,
-      status: musiqApp_STATUS_WAITING,
+      status: STATUS_WAITING,
       submittedBy: Meteor.user().username,
       created: new Date()
     });
-    // clear current search results list, and signal data change
-    musiqApp_searchResults.length = 0;
-    musiqApp_searchResults_dep.changed();
+    // clear current search results list (reactive, so updates UI)
+    musiqApp.clearSearchResults();
   }
 });
