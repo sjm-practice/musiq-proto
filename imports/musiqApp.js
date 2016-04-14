@@ -85,21 +85,23 @@ class MusiqApp {
     }
   }
 
-  // playerWaitingAndReady() {
+  playerWaitingAndReady() {
        // returns true if the player is rendered && not playing anything
-  //   return ($('#playNext').length !== 0) &&
-  //     (this.getCuedVideoId() === this.DEFAULT_STANDBY_VIDEO);
-  // }
+    return ($('#playNext').length !== 0) &&
+      (this.getCuedVideoId() === this.DEFAULT_STANDBY_VIDEO);
+  }
 
-  // cueNewlyAddedWhenPlayerWaiting() {
-  //   if (this.playerWaitingAndReady()) {
-  //     this.cueNextSong();
-  //   }
-  // }
+  cueNewlyAddedWhenPlayerWaiting() {
+    if (this.playerWaitingAndReady()) {
+      this.cueNextSong();
+    }
+  }
 
   startCurrentVideo() {
     return this.getCuedVideoId() !== this.standbyVideoId;
   }
 }
 
-export let musiqApp = new MusiqApp();
+let musiqApp = new MusiqApp();
+
+export {musiqApp};
