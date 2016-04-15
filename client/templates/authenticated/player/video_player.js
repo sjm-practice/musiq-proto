@@ -13,8 +13,8 @@ Template.videoPlayer.onRendered(function () {
 
   requestsObserver = requestsCursor.observe({
     added: function (doc) {
+      // TODO remove this alert, when you get more comfortable/confident with how the observer behaves
       Bert.alert(`user: ${doc.submittedBy} added request: ${doc.title}`, 'success');
-      console.log(musiqApp.YoutubePlayer);
       musiqApp.cueNewlyAddedWhenPlayerWaiting();
     }
   });

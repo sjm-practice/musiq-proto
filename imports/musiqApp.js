@@ -42,6 +42,8 @@ class MusiqApp {
 
   getCuedVideoId() {
     // gets video url, and extracts the video id
+    // TODO in some cases, we lose YoutubePlayer, and get an exception when calling
+    // getVideoUrl. figure that out. will see exceptions on the client console.
     var url = this.YoutubePlayer.getVideoUrl();
     var match = url.match(/[?&]v=([^&]+)/);
     return match[1];
@@ -86,9 +88,10 @@ class MusiqApp {
   }
 
   playerWaitingAndReady() {
-       // returns true if the player is rendered && not playing anything
-    return ($('#playNext').length !== 0) &&
-      (this.getCuedVideoId() === this.DEFAULT_STANDBY_VIDEO);
+    let playerRendered = $('#playNext').length !== 0;
+    let onStandby = this.getCuedVideoId() === this.standbyVideoId;
+
+    return playerRendered && onStandby;
   }
 
   cueNewlyAddedWhenPlayerWaiting() {
