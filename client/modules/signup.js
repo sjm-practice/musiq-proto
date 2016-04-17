@@ -13,6 +13,10 @@ let validation = ( template ) => {
         required: true,
         email: true
       },
+      username: {
+        required: true,
+        minlength: 3
+      },
       password: {
         required: true,
         minlength: 6
@@ -22,6 +26,10 @@ let validation = ( template ) => {
       emailAddress: {
         required: 'Need an email address here.',
         email: 'Is this email address legit?'
+      },
+      username: {
+        required: 'Need a username here.',
+        minlength: 'Use at least 3 characters, please.'
       },
       password: {
         required: 'Need a password here.',
@@ -35,19 +43,9 @@ let validation = ( template ) => {
 let _handleSignup = ( template ) => {
   let user = {
     email: template.find( '[name="emailAddress"]' ).value,
+    username: template.find( '[name="username"]' ).value,
     password: template.find( '[name="password"]' ).value,
-    profile: {
-      customer: {
-        userId: "",
-        name: "",
-        streetAddress: "",
-        secondaryAddress: "",
-        city: "",
-        state: "",
-        zipCode: "",
-        telephone: ""
-      }
-    }
+    profile: {}
   };
 
   Accounts.createUser( user, ( error ) => {
