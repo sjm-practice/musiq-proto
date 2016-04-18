@@ -28,7 +28,12 @@ Template.queue.events({
 
 Template.queue.helpers({
   players: function() {
-    return Meteor.users.find({}, {fields: {'username': 1}});
+    return Meteor.users.find({},
+      {
+        fields: {'username': 1},
+        sort: {'username': 1}
+      }
+    );
   },
 
   isSelectedPlayer: function() {
