@@ -1,5 +1,4 @@
 Template.player.onCreated(function () {
-  this.subscribe('players');
   this.subscribe('requests');
 });
 
