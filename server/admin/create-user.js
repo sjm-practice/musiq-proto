@@ -9,3 +9,13 @@ Accounts.onCreateUser(function (options, user) {
 
   return user;
 });
+
+// Enforce than username is required for created new users.
+// Note, the 403 comes from following the example in docs.meteor.com
+Accounts.validateNewUser(function (user) {
+  if (user.username && user.username.length >= 3) {
+    return true;
+  } else {
+    throw new Meteor.Error('403', "Username must have at lest 3 characters");
+  }
+});
