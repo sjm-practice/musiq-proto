@@ -4,7 +4,7 @@
   "description": "A prototype of a web based jukebox.",
   "main": "index.js",
   "scripts": {
-    "test": "meteor test --driver-package practicalmeteor:mocha"
+    "test-watch": "meteor test --driver-package practicalmeteor:mocha --port 3100"
   },
   "repository": {
     "type": "git",
